@@ -5,4 +5,4 @@ def toStr(n,base):
    else:
       return toStr(n//base,base) + convertString[n%base]
 
-print(toStr(1453,16)) # base: 2 8 10 16...
+print(toStr(1453,16)) # available bases from 2 to 16
