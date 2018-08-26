@@ -23,4 +23,19 @@ def binatySearch(alist, item):
 
 
 # Recursive version
+def recursiveBinarySearch(alist, item):
+    if len(alist) == 0:
+        return False
+    else:
+        midpoint = len(alist) // 2
+        if alist[midpoint] == item:
+            return True
+        else:
+            if item < alist[midpoint]:
+                return binatySearch(alist[:midpoint], item)
+            else:
+                return binatySearch(alist[midpoint + 1:], item)
 
+testlist = [1, 3, 5, 7, 12, 15, 19, 23]
+print(recursiveBinarySearch(testlist, 7))
+print(recursiveBinarySearch(testlist, 50))
